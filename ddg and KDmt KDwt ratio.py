@@ -1,7 +1,7 @@
 from pynverse import inversefunc
 import math
 def KDratio2ddg(ratio):
-    # ratio = KDmt/KDwt   
+    # ratio = KDmt/KDwt 表示affinity提升的倍数  
     return math.log(1/ratio)*1.987*298/1000
 def ddg2KDratio(ddg):
     inv_f = inversefunc(KDratio2ddg,y_values=ddg,domain=[0.00001,100000],# domain 表示原函数自变量区间，
